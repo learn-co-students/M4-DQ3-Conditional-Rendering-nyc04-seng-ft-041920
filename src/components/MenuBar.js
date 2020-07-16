@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const MenuBar = (props) => {
-
+  // console.log(props.selectDetail);
   /*
 
   The 'a' tags below are the menu items. Think about the way a menu 
@@ -15,24 +15,39 @@ const MenuBar = (props) => {
 
   return (
     <div className="ui four item menu">
-      <a className="item active" id="profile">
-        <i className="user large icon" id="profile"/>
+      <a
+        onClick={() => props.selectDetail("profile")}
+        className="item active"
+        id="profile"
+      >
+        <i className="user large icon" id="profile" />
       </a>
 
-      <a className="item" id="photo">
-        <i className="photo large icon" id="photo"/>
+      <a
+        onClick={() => props.selectDetail("photo")}
+        className="item"
+        id="photo"
+      >
+        <i className="photo large icon" id="photo" />
       </a>
 
-      <a className="item" id="cocktail">
-        <i className="cocktail large icon" id="cocktail"/>
+      <a
+        onClick={() => props.selectDetail("cocktail")}
+        className="item"
+        id="cocktail"
+      >
+        <i className="cocktail large icon" id="cocktail" />
       </a>
 
-      <a className="item" id="pokemon"> 
-        <i className=" themeisle large icon" id="pokemon"/>
+      <a
+        onClick={() => props.selectDetail("pokemon")}
+        className="item"
+        id="pokemon"
+      >
+        <i className=" themeisle large icon" id="pokemon" />
       </a>
     </div>
-  )
+  );
+};
 
-}
-
-export default MenuBar
+export default MenuBar;
